@@ -1,0 +1,16 @@
+
+project Common is
+   for Source_Dirs use ("source");
+   for Object_Dir use "build";
+   for Library_Name use "Common";
+   for Library_Dir use "library";
+   for Library_Kind use "static";
+
+   package Builder is
+      for Default_Switches ("Ada") use ("-m");
+   end Builder;
+
+   package Compiler is
+      for Default_Switches ("Ada") use ("-fstack-check", "-g", "-gnata", "-gnat05", "-gnato", "-gnatVa", "-gnatwa", "-gnatW8", "-gnatiw", "-gnaty3abefhiklnprsx", "-O2", "-s", "-z");
+   end Compiler;
+end Common;
